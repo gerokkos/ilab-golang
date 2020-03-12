@@ -17,11 +17,13 @@ import (
 var tpl = template.Must(template.ParseFiles("index.html"))
 var apiKey *string
 
+//Source struck field
 type Source struct {
 	ID   interface{} `json:"id"`
 	Name string      `json:"name"`
 }
 
+//Article struck field
 type Article struct {
 	Source      Source    `json:"source"`
 	Author      string    `json:"author"`
@@ -33,12 +35,14 @@ type Article struct {
 	Content     string    `json:"content"`
 }
 
+//Results struck field
 type Results struct {
 	Status       string    `json:"status"`
 	TotalResults int       `json:"totalResults"`
 	Articles     []Article `json:"articles"`
 }
 
+//Search struck field
 type Search struct {
 	SearchKey  string
 	NextPage   int
