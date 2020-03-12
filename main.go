@@ -35,6 +35,12 @@ type Article struct {
 	Content     string    `json:"content"`
 }
 
+//FormatPublishedDate formating the published date to be readable
+func (a *Article) FormatPublishedDate() string {
+	year, month, day := a.PublishedAt.Date()
+	return fmt.Sprintf("%v %d, %d", month, day, year)
+}
+
 //Results struck field
 type Results struct {
 	Status       string    `json:"status"`
