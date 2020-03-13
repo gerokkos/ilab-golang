@@ -56,6 +56,8 @@ type Search struct {
 	Results    Results
 }
 
+//IsLastPage checks fo
+
 func indexHandler(w http.ResponseWriter, r *http.Request) {
 	tpl.Execute(w, nil)
 }
