@@ -1,1 +1,1 @@
-web: bin/iLab-Demo -apikey $NEWS_API_KEY
+web: bin/ilab-golang -apikey $NEWS_API_KEY
