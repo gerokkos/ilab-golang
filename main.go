@@ -34,8 +34,7 @@ type Article struct {
 	PublishedAt time.Time `json:"publishedAt"`
 	Content     string    `json:"content"`
 }
-
-//FormatPublishedDate formating the published date to be readable
+//formating the published date to be readable
 func (a *Article) FormatPublishedDate() string {
 	year, month, day := a.PublishedAt.Date()
 	return fmt.Sprintf("%v %d, %d", month, day, year)
@@ -55,8 +54,6 @@ type Search struct {
 	TotalPages int
 	Results    Results
 }
-
-//IsLastPage checks fo
 
 func indexHandler(w http.ResponseWriter, r *http.Request) {
 	tpl.Execute(w, nil)
