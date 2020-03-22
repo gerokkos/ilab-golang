@@ -56,12 +56,12 @@ type Search struct {
 	Results    Results
 }
 
-//IsLastPage struck field
+//IsLastPage check
 func (s *Search) IsLastPage() bool {
 	return s.NextPage >= s.TotalPages
 }
 
-//CurrentPage is
+//CurrentPage check
 func (s *Search) CurrentPage() int {
 	if s.NextPage == 1 {
 		return s.NextPage
@@ -70,7 +70,7 @@ func (s *Search) CurrentPage() int {
 	return s.NextPage - 1
 }
 
-//PreviousPage is
+//PreviousPage check
 func (s *Search) PreviousPage() int {
 	return s.CurrentPage() - 1
 }
